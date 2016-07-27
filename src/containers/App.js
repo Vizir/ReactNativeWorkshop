@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Header from '../components/base/Header'
 import Post from '../components/post/Post'
+import Loader from '../components/base/Loader'
 import * as PostsActions from '../actions/Posts'
 
 export class App extends Component {
@@ -13,9 +14,16 @@ export class App extends Component {
 
   _renderPosts() {
     if (this.props.posts.length > 0) {
-      return this.props.posts.map((post, index) => {
+      let posts = this.props.posts.map((post, index) => {
         return (<Post key={index} post={post} />)
       })
+      return (
+        <ScrollView>
+          {posts}
+        </ScrollView>
+      )
+    } else {
+      return <Loader loading={this.props.loading} />
     }
   }
 
@@ -24,9 +32,7 @@ export class App extends Component {
     return (
       <View style={styles.app}>
         <Header title='ReactNativeIt' />
-        <ScrollView>
-          {posts}
-        </ScrollView>
+        {posts}
       </View>
     )
   }

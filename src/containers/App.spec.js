@@ -5,6 +5,7 @@ import * as ConfigureStore from '../store/ConfigureStore'
 import { App, styles } from './App'
 import Header from '../components/base/Header'
 import Post from '../components/post/Post'
+import Loader from '../components/base/Loader'
 import { View, ScrollView, } from 'react-native'
 
 const setup = (props) => {
@@ -21,23 +22,21 @@ const setup = (props) => {
 
 describe('App Container', () => {
   describe('when has no posts', () => {
-    it('should render a view with header and a empty view', () => {
+    it('should render a view with header and a loader', () => {
       let props = {
         posts: [],
-        loading: false,
+        loading: true,
         actions: {}
       }
       const { output } = setup(props)
       expect(output.type).toBe(View)
       expect(output.props.style).toBe(styles.app)
 
-      let [ header, postsContainer ] = output.props.children
+      let [ header, loaderContainer ] = output.props.children
 
       expect(header.type).toBe(Header)
-      expect(postsContainer.type).toBe(ScrollView)
-
-      let postsContent = postsContainer.props.children
-      expect(postsContent).toBe(undefined)
+      expect(loaderContainer.type).toBe(Loader)
+      expect(loaderContainer.props.loading).toEqual(true)
     })
   })
 
