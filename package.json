@@ -1,0 +1,32 @@
+{
+  "name": "ReactNativeWorkshop",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "mocha --require react-native-mock/mock.js mocha.js --compilers js:babel-core/register --recursive src",
+    "test:watch": "mocha --watch --require react-native-mock/mock.js mocha.js --compilers js:babel-core/register --recursive src"
+  },
+  "dependencies": {
+    "react": "15.2.1",
+    "react-native": "0.30.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.11.4",
+    "babel-jest": "^13.2.2",
+    "babel-preset-airbnb": "^2.0.0",
+    "babel-preset-react-native": "^1.9.0",
+    "expect": "^1.20.2",
+    "mocha": "^2.5.3",
+    "nock": "^8.0.0",
+    "react": "^15.2.1",
+    "react-addons-test-utils": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "react-native-mock": "^0.2.4",
+    "redux-mock-store": "^1.1.2"
+  }
+}
