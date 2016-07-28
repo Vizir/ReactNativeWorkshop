@@ -1,5 +1,9 @@
 # React Native Workshop
 
+## Workshop Keynote
+
+- [SlideShare](http://pt.slideshare.net/chagasaway/react-native-workshop)
+
 ## Before starting with React Native Workshop this is what you need
 
 - [React Native](https://facebook.github.io/react-native/)
@@ -25,4 +29,4 @@
 
     npm test:watch
 
-React Native Workshop - A sample project - Vizir Software Studio (MIT)
+React Native Workshop - Sample - Vizir Software Studio
