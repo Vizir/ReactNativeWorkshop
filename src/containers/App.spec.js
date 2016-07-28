@@ -5,7 +5,7 @@ import * as ConfigureStore from '../store/ConfigureStore'
 import { App, styles } from './App'
 import Header from '../components/base/Header'
 import Post from '../components/post/Post'
-import Loader from '../components/base/Loader'
+import Loader from '../components/base/loader/Loader'
 import { View, ScrollView, } from 'react-native'
 
 const setup = (props) => {

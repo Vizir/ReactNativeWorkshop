@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Header from '../components/base/Header'
 import Post from '../components/post/Post'
-import Loader from '../components/base/Loader'
+import Loader from '../components/base/loader/Loader'
 import * as PostsActions from '../actions/Posts'
 
 export class App extends Component {

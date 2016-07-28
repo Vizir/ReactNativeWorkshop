@@ -1,13 +1,11 @@
 import React, { Component, PropTypes } from 'react'
 import { View, StyleSheet, Text, } from 'react-native'
 
-export default class Loader extends Component {
+export default class BaseLoader extends Component {
   _renderLoader() {
     if (this.props.loading) {
       return (
-        <Text>
-          Carregando...
-        </Text>
+        <Text>Carregando...</Text>
       )
     }
   }
@@ -30,6 +28,6 @@ export const styles = StyleSheet.create({
   }
 })
 
-Loader.propTypes = {
+BaseLoader.propTypes = {
   loading: PropTypes.bool.isRequired,
 }
